@@ -24,7 +24,11 @@ submitButton.onclick = function () {
   let selectedRate = document.querySelector(".rating li.active");
   if (selectedRate !== null) {
     userRate.innerText = "" + selectedRate.getAttribute("data-value");
-    formBox.style.display = "none";
-    thanksContainer.classList.add("active");
+    formBox.classList.add("active");
+    setTimeout(() => {
+      formBox.style.display = "none";
+      thanksContainer.classList.add("active");
+      thanksContainer.style.transform = "translateY(0%)";
+    }, 1050);
   }
 };
